@@ -1,0 +1,43 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="counter.master.cs" Inherits="counter" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>site traffic statistics</title>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        <table style="width: 749px" border="0" cellpadding="0" cellspacing="0">
+            <tr>
+                <td style="background-image: url(Image/1.jpg); width: 749px; height: 64px">
+                </td>
+            </tr>
+            <tr>
+                <td style="height: 41px">
+                    <asp:Menu ID="Menu1" runat="server" Orientation="Horizontal">
+                        <Items>
+                            <asp:MenuItem NavigateUrl="~/Default.aspx" Text="default"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl ="~/DayCount.aspx" Text="day statistics"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl ="~/MonthCount.aspx" Text="month statistics"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl ="~/YearCount.aspx" Text="year statistics"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/IPCount.aspx" Text="ip statistics"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl ="~/BrowserCount.aspx" Text="brower statistics"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl ="~/OSCount.aspx" Text="os statistics"></asp:MenuItem>
+                        </Items>
+                    </asp:Menu>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                <asp:contentplaceholder id="ContentPlaceHolder1" runat="server">
+                </asp:contentplaceholder>
+                </td>
+            </tr>
+        </table>
+    </div>
+    </form>
+</body>
+</html>
